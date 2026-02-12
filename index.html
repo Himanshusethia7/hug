@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hug :: intimate day</title>
-    <!-- soft, tender vibe — no sharp edges -->
+    <title>for you · hug day · 𖹭</title>
+    <!-- intimate, handwritten, only for her -->
     <style>
-        /* reset – whisper quiet */
+        /* completely personal — like a note slipped under her pillow */
         * {
             margin: 0;
             padding: 0;
@@ -14,345 +14,408 @@
         }
 
         body {
-            background: #fce9e6;  /* warm blush, like skin after an embrace */
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
-                         'Helvetica Neue', sans-serif;
+            background: #fbe9e6;  /* your skin after sunlight, her favorite blush */
+            font-family: 'Trebuchet MS', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            padding: 1.5rem;
-            line-height: 1.5;
-            color: #4a3b3c;  /* muted rose-brown, intimate ink */
+            padding: 1.2rem;
+            color: #4a3536;
+            background-image: radial-gradient(circle at 10% 30%, rgba(255, 220, 210, 0.2) 0%, transparent 25%),
+                              radial-gradient(circle at 90% 70%, rgba(255, 200, 200, 0.15) 0%, transparent 30%);
         }
 
-        /* main = a held space */
-        .cocoon {
-            max-width: 750px;
+        /* the letter — like I'm holding her */
+        .letter {
+            max-width: 760px;
             width: 100%;
-            background: rgba(255, 248, 245, 0.7);  /* veiled linen */
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 48px 24px 56px 24px;
+            background: rgba(255, 250, 245, 0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-radius: 40px 16px 56px 16px;  /* asymmetrical, like an embrace */
             box-shadow: 
-                0 18px 30px -12px rgba(90, 40, 40, 0.08),
-                0 8px 14px -6px rgba(140, 70, 70, 0.04),
-                inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+                0 25px 40px -18px rgba(100, 50, 50, 0.15),
+                0 10px 20px -10px rgba(130, 70, 70, 0.1),
+                inset 0 1px 2px rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 235, 225, 0.7);
             padding: 2.8rem 2.2rem;
-            transition: all 0.2s ease;
-            border: 1px solid rgba(255, 235, 230, 0.5);
+            transition: border 0.2s, box-shadow 0.3s;
         }
 
-        /* intimate means: no loud movements, just quiet closeness */
-        .cocoon:hover {
-            box-shadow: 
-                0 24px 40px -16px rgba(110, 60, 60, 0.1),
-                inset 0 0 0 1px rgba(255, 245, 240, 0.8);
-            background: rgba(255, 250, 248, 0.75);
+        .letter:hover {
+            border: 1px solid rgba(255, 210, 200, 0.9);
+            box-shadow: 0 30px 50px -20px rgba(120, 60, 60, 0.2);
         }
 
-        /* breathing heart — subtle, like two heartbeats syncing */
-        .pulse-embley {
+        /* her name — the softest sound */
+        .her-name {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 320;
+            letter-spacing: 2px;
+            color: #a46a6a;
+            margin-bottom: 0.2rem;
+            text-transform: lowercase;
+            font-style: normal;
             display: flex;
             justify-content: center;
-            margin-bottom: 2rem;
-            filter: drop-shadow(0 4px 6px rgba(190, 100, 100, 0.1));
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .heart-holds {
-            display: inline-block;
-            position: relative;
-            font-size: 3.4rem;
-            line-height: 1;
-            animation: softPulse 3.6s infinite ease-in-out;
-            transform-origin: center;
-            letter-spacing: 8px;
-        }
-
-        @keyframes softPulse {
-            0%, 100% { transform: scale(1); opacity: 0.9; }
-            50% { transform: scale(1.08); opacity: 1; }
-        }
-
-        /* the hug day greeting — close, almost whispered */
-        .day-name {
-            text-align: center;
+        .her-name span {
+            background: rgba(255, 225, 220, 0.5);
+            padding: 0.2rem 1.4rem;
+            border-radius: 50px;
+            font-size: 2rem;
             font-weight: 340;
-            font-size: 1.8rem;
-            letter-spacing: 1px;
+            border: 0.5px solid #ffd9d0;
+            backdrop-filter: blur(4px);
+            box-shadow: inset 0 2px 4px white;
+            color: #7d5456;
+        }
+
+        /* small devotional line — just for her */
+        .dedication {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #a47e7e;
+            margin-bottom: 1.2rem;
+            font-weight: 300;
             text-transform: lowercase;
-            color: #86626b;
-            margin-bottom: 0.4rem;
-            font-feature-settings: "ss02", "case";
+            border-bottom: 1px dashed #ecc7c0;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* the hug itself — words that hold */
+        .hug-message {
+            text-align: center;
+            margin: 2.2rem 0 1.8rem;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            font-weight: 310;
+            color: #5c4043;
+            background: rgba(255, 235, 230, 0.3);
+            padding: 1.8rem 1rem;
+            border-radius: 80px 20px 80px 20px;
+            border: 0.5px solid rgba(255, 210, 200, 0.7);
+            backdrop-filter: blur(6px);
             word-spacing: 2px;
         }
 
-        .day-name span {
-            background: linear-gradient(145deg, #ab7d7d20, #dbb6b620);
-            padding: 0.2rem 0.9rem;
-            border-radius: 40px;
-            font-weight: 380;
-            border: 0.5px solid rgba(230, 200, 200, 0.4);
-            backdrop-filter: blur(4px);
-            font-size: 1.9rem;
-        }
-
-        /* tender message — like arms reaching quietly */
-        .embrace-text {
-            font-size: 1.45rem;
-            text-align: center;
-            margin: 2.2rem 0 1.8rem 0;
-            font-weight: 310;
-            color: #5e4a4d;
-            line-height: 1.7;
-            padding: 0 0.8rem;
-            font-style: normal;
-            border-top: 1px dashed rgba(200, 160, 160, 0.25);
-            border-bottom: 1px dashed rgba(200, 160, 160, 0.25);
-            padding: 1.6rem 0.8rem;
-        }
-
-        .embrace-text i {
+        .hug-message i {
+            color: #b38484;
             font-style: italic;
-            color: #9f7276;
             font-weight: 350;
         }
 
-        /* details: small, warm, tactile — like fingers tracing */
-        .details {
+        .hug-message .you-special {
+            background: rgba(255, 220, 210, 0.3);
+            padding: 0.2rem 0.6rem;
+            border-radius: 30px;
+            font-weight: 390;
+        }
+
+        /* tiny intimate details — things only she knows */
+        .her-details {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1.8rem;
-            margin: 2.5rem 0 1.2rem;
-            color: #795a5c;
-            font-weight: 330;
+            gap: 1.6rem;
+            margin: 2.2rem 0 1.6rem;
         }
 
-        .detail-item {
+        .detail-her {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: rgba(255, 235, 230, 0.3);
-            padding: 0.8rem 1.2rem;
-            border-radius: 60px 20px 60px 20px;
-            border: 0.5px solid rgba(255, 220, 210, 0.6);
-            backdrop-filter: blur(2px);
-            font-size: 0.98rem;
-            transition: all 0.18s;
+            background: rgba(252, 235, 230, 0.6);
+            padding: 0.9rem 1.4rem;
+            border-radius: 50px 16px 50px 16px;
+            border: 0.5px solid rgba(240, 190, 180, 0.5);
+            color: #735c5e;
+            font-size: 1rem;
+            font-weight: 330;
+            backdrop-filter: blur(4px);
+            transition: all 0.2s;
+            box-shadow: 0 2px 6px rgba(200, 150, 150, 0.05);
         }
 
-        .detail-item:hover {
-            background: rgba(255, 225, 215, 0.5);
-            border-color: rgba(200, 140, 140, 0.4);
-            transform: translateY(-2px);
+        .detail-her:hover {
+            background: rgba(255, 225, 215, 0.7);
+            border-color: #d4a29c;
+            transform: scale(0.98);
         }
 
         .detail-icon {
-            font-size: 1.9rem;
-            margin-bottom: 0.1rem;
-            opacity: 0.85;
+            font-size: 2.1rem;
+            margin-bottom: 0.25rem;
+            opacity: 0.8;
         }
 
-        /* hug timer — a slow count, no rush */
-        .hug-clock {
-            background: rgba(245, 220, 215, 0.3);
-            border-radius: 120px;
-            padding: 0.8rem 2rem;
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 1.2rem;
-            border: 0.5px solid rgba(230, 190, 180, 0.4);
+        /* heartbeat — only ours */
+        .our-heartbeat {
             display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 2.2rem;
+            margin: 1.2rem 0 0.6rem;
+            filter: drop-shadow(0 4px 6px rgba(160, 100, 100, 0.1));
+            animation: tinyGlow 3s infinite alternate;
+        }
+
+        @keyframes tinyGlow {
+            0% { opacity: 0.75; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.02); }
+        }
+
+        /* our hug — personal count, not for anyone else */
+        .private-hug-clock {
+            background: rgba(255, 235, 225, 0.6);
+            border-radius: 100px;
+            padding: 1rem 1.8rem;
+            margin-top: 1.8rem;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            gap: 0.6rem;
-            color: #6f565a;
+            gap: 0.8rem;
+            color: #6e4f53;
+            font-size: 1.22rem;
+            border: 0.5px solid rgba(230, 190, 180, 0.5);
             backdrop-filter: blur(4px);
             letter-spacing: 0.3px;
         }
 
-        .hug-clock span {
-            font-weight: 460;
-            background: #ffffff70;
-            padding: 0.2rem 0.9rem;
-            border-radius: 40px;
-            color: #8f5a5c;
-            font-size: 1.35rem;
-            border: 0.5px solid #ffe2db;
-            box-shadow: inset 0 1px 4px rgba(255,255,255,0.8);
+        .private-hug-clock .big-number {
+            font-size: 2rem;
+            font-weight: 380;
+            background: white;
+            padding: 0.2rem 1rem;
+            border-radius: 50px;
+            color: #8c5a5a;
+            border: 0.5px solid #ffe0da;
+            box-shadow: inset 0 1px 7px rgba(255,255,255,0.9);
+            margin: 0 0.2rem;
         }
 
-        /* arms/silhouette – barely there, but present */
-        .arms-silhouette {
-            display: flex;
-            justify-content: center;
-            gap: 0.6rem;
-            margin: 1.4rem 0 0.2rem;
-            font-size: 2.4rem;
-            opacity: 0.55;
-            filter: drop-shadow(0 2px 2px rgba(150, 90, 90, 0.1));
-            letter-spacing: -4px;
-        }
-
-        /* small personal note – intimate, handwritten feel */
-        .personal-note {
-            text-align: right;
-            font-size: 0.95rem;
-            margin-top: 2rem;
-            color: #7a6266;
-            border-top: 1px solid rgba(210, 180, 180, 0.3);
-            padding-top: 1.5rem;
-            font-weight: 320;
-            text-transform: lowercase;
-            font-style: italic;
+        /* her special sign — only she understands */
+        .secret-signature {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 2.2rem;
+            padding-top: 1.2rem;
+            border-top: 2px dotted rgba(200, 170, 170, 0.3);
+            font-size: 1rem;
+            color: #7a5e62;
+            font-weight: 320;
+            text-transform: lowercase;
         }
 
-        .personal-note .curl {
-            font-size: 1.5rem;
-            opacity: 0.7;
+        .secret-signature .left-symbol,
+        .secret-signature .right-symbol {
+            font-size: 1.9rem;
+            opacity: 0.5;
         }
 
-        /* everything lowercase, intimate = not formal */
-        h1, h2, h3, p {
+        /* custom name – dynamically yours */
+        .fill-her-name {
+            background: #ffeae5;
+            padding: 0.1rem 0.5rem;
+            border-radius: 20px;
+            font-weight: 390;
+            color: #784e4e;
+        }
+
+        /* make everything lowercase — like a soft whisper */
+        h1, h2, h3, p, div {
             all: unset;
             display: block;
         }
 
-        /* RESPONSIVE — soft on any screen */
-        @media (max-width: 500px) {
-            .cocoon {
-                padding: 2rem 1.5rem;
-                border-radius: 36px 20px 36px 20px;
+        /* responsive, gentle */
+        @media (max-width: 480px) {
+            .letter {
+                padding: 1.8rem 1.2rem;
             }
-            .embrace-text {
-                font-size: 1.25rem;
+            .her-name span {
+                font-size: 1.7rem;
             }
-            .heart-holds {
-                font-size: 2.8rem;
-            }
-            .details {
-                gap: 1rem;
+            .hug-message {
+                font-size: 1.35rem;
             }
         }
 
-        /* invisible accessibility skip – not needed here, just quiet */
+        /* selection color — her favorite, I hope */
         ::selection {
-            background: #deb6b0;
-            color: #2c1e1f;
-        }
-        :-moz-selection {
-            background: #deb6b0;
-            color: #2c1e1f;
-        }
-
-        /* delicate ornament – breath */
-        .breath {
-            height: 0.5rem;
+            background: #eac2ba;
+            color: #3e2b2c;
         }
     </style>
 </head>
 <body>
-    <!-- everything is an embrace, nothing shouts -->
-    <div class="cocoon">
-        
-        <!-- tiny heartbeat, almost shy -->
-        <div class="pulse-embley">
-            <span class="heart-holds">🤍🫂🤍</span>
+
+    <!-- this whole page is for one person. only her. -->
+    <div class="letter">
+
+        <!-- 𖹭 her name — you can change it below (just once) 𖹭 -->
+        <div class="her-name">
+            <span>🫂 for my 𖹭</span>
+        </div>
+        <div class="dedication">
+            — hug day, intimate —
         </div>
         
-        <!-- hug day — lowercase, intimate, like a secret -->
-        <div class="day-name">
-            <span>hug day · intimate</span>
+        <!-- THE HUG — exactly what I'd tell her -->
+        <div class="hug-message">
+            <span class="you-special">you</span> fit perfectly in my arms, <br>
+            like you were always meant to be here. <br>
+            <i>not a tight squeeze, just warm, </i><br>
+            ·  i can feel your heartbeat  · <br>
+            <span style="font-size:1.2rem;">🤍🫂🤍</span>
         </div>
         
-        <!-- main whispered message – arms, silence, warmth -->
-        <div class="embrace-text">
-            not too tight, <br> 
-            <i>just enough to feel your breath</i> <br>
-            slow, present, <br>
-            ·  your arms around me  · 
-        </div>
-        
-        <!-- small intimate moments – tactile, real -->
-        <div class="details">
-            <div class="detail-item">
-                <span class="detail-icon">🕯️</span>
-                <span>soft light</span>
+        <!-- small things that are so her — intimate, sensory, ours -->
+        <div class="her-details">
+            <div class="detail-her">
+                <span class="detail-icon">🧣</span>
+                <span>the scent of your hair</span>
             </div>
-            <div class="detail-item">
-                <span class="detail-icon">🛋️</span>
-                <span>silence</span>
+            <div class="detail-her">
+                <span class="detail-icon">🤍</span>
+                <span>your hand on my chest</span>
             </div>
-            <div class="detail-item">
-                <span class="detail-icon">☕</span>
-                <span>shared warmth</span>
+            <div class="detail-her">
+                <span class="detail-icon">🌙</span>
+                <span>late night quiet</span>
             </div>
-            <div class="detail-item">
-                <span class="detail-icon">🤎</span>
-                <span>skin to skin</span>
+            <div class="detail-her">
+                <span class="detail-icon">🫂</span>
+                <span>no words, just us</span>
             </div>
         </div>
         
-        <!-- the hug itself — counted in seconds, unhurried -->
-        <div class="hug-clock">
-            <span style="background: none; padding: 0; font-size: 1.6rem;">𓂀𓂋</span>  
-            this hug lasts:  
-            <span id="hugSeconds">20</span> seconds  
-            <span style="background: none; padding: 0; font-size: 1.6rem;">𓂋𓂀</span>
+        <!-- our private pulse — it doesn't count seconds, it counts moments -->
+        <div style="display: flex; justify-content: center; margin: 0.6rem 0 0.2rem;">
+            <span style="background: rgba(255,210,200,0.3); padding: 0.3rem 1.2rem; border-radius: 30px; font-size:1rem; color:#775e60;">𓍼 the hug we're in right now 𓍼</span>
         </div>
         
-        <!-- two figures, barely drawn — you & me -->
-        <div class="arms-silhouette">
-            <span>𑁍</span>  
-            <span>🫂</span>  
-            <span>𑁍</span>
+        <!-- intimate timer — not a timer, but a linger -->
+        <div class="private-hug-clock">
+            <span style="font-size:1.7rem;">🫂</span>  
+            <span>this one has lasted</span>  
+            <span class="big-number" id="hugDuration">28</span>  
+            <span>heartbeats</span>
+            <span style="font-size:1.7rem;">🫂</span>
         </div>
         
-        <!-- closing intimate note — just between us -->
-        <div class="personal-note">
-            <span class="curl">〰️</span>
-            <span>for you, today, only you know how this feels</span>
-            <span class="curl">〰️</span>
+        <!-- our arms, sketched in symbols -->
+        <div style="display: flex; justify-content: center; gap: 0.5rem; font-size: 2.5rem; margin: 1rem 0 0.2rem; opacity: 0.45; letter-spacing: -2px;">
+            <span>𖹭</span> <span>🫂</span> <span>𖹭</span>
         </div>
         
-        <!-- tiny breath spacer, unassuming -->
-        <div class="breath"></div>
+        <!-- FOR HER EYES ONLY — a secret line, just between us -->
+        <div class="secret-signature">
+            <span class="left-symbol">✎ 🪽</span>
+            <span style="font-size: 1.1rem; font-style: italic;"><!-- her initials appear here --> <span id="herInitialsMark"></span>  always, only you · <?></span>
+            <span class="right-symbol">🪽 ✎</span>
+        </div>
+
+        <!-- tiny note — handwritten style, editable -->
+        <div style="text-align: right; margin-top: 1rem; font-size: 0.9rem; color: #9f8282; border-top: 1px dashed #edd7d0; padding-top: 1rem; padding-bottom: 0.2rem; font-style: italic;">
+            <span>for her, from me · hug day · intimate</span>
+        </div>
     </div>
 
-    <!-- quiet script — counts a slow, lingering hug (intimate & still) -->
+    <!-- intimate script – makes it personal, about HER, about you two. 
+         you can easily replace "her name" and "your initials" below  -->
     <script>
         (function() {
             "use strict";
 
-            // A hug that doesn't rush – seconds grow, then reset softly.
-            const hugEl = document.getElementById('hugSeconds');
-            if (!hugEl) return;
+            // ---------------------------------------------
+            //  💌  MAKE IT HERS — EDIT THESE TWO LINES  💌 
+            // ---------------------------------------------
+            const HER_NAME = "anaya";        // <-- her beautiful name
+            const YOUR_INITIALS = "A & J";   // <-- your initials / pet names / anything
+            // ---------------------------------------------
+            //  everything else becomes intimate and personal
+            // ---------------------------------------------
+            
+            // change the main greeting to include her actual name – small gesture, big meaning
+            const nameContainer = document.querySelector('.her-name span');
+            if (nameContainer) {
+                // softly replace — keep the symbol, add her name
+                nameContainer.innerHTML = `🫂 for my 𖹭 <span style="background:rgba(255,210,200,0.6); padding:0.1rem 0.7rem; border-radius:40px; margin-left:6px; font-weight:380;">${HER_NAME}</span>`;
+            }
 
-            let seconds = 20;      // start at 20, feels like a real hug length
-            const hugInterval = setInterval(function() {
-                // intimate: it goes up, not down — a hug that keeps giving
-                seconds = seconds + 1;
-                
-                // but we don't want numbers to shout; stay within 20–45, gentle range
-                if (seconds > 46) {
-                    seconds = 22;   // soft reset, like a second hug
-                }
-                
-                // update the display — no animation, just a quiet presence
-                hugEl.textContent = seconds;
-            }, 2800); // every 2.8 sec — slow, like a long embrace, not a clock
-            // no cleanup needed — this hug continues as long as the page is open
+            // personalize the dedication — include her essence
+            const dedicationEl = document.querySelector('.dedication');
+            if (dedicationEl) {
+                dedicationEl.innerHTML = `— hug day, intimate · for ${HER_NAME} —`;
+            }
+
+            // add her name softly in the hug message 
+            const hugMsg = document.querySelector('.hug-message');
+            if (hugMsg) {
+                // delicate, not forced — just her presence
+                const personalMsg = document.createElement('div');
+                personalMsg.style.marginTop = '0.8rem';
+                personalMsg.style.fontSize = '1.2rem';
+                personalMsg.style.color = '#8f6a6a';
+                personalMsg.style.fontWeight = '320';
+                personalMsg.innerHTML = `🕯️ i feel you, ${HER_NAME} 𖹭`;
+                hugMsg.appendChild(personalMsg);
+            }
+
+            // add her initials / your shared mark to the secret signature
+            const initialSpot = document.getElementById('herInitialsMark');
+            if (initialSpot) {
+                initialSpot.innerHTML = `${YOUR_INITIALS} · `;
+            }
+
+            // intimate heartbeat counter – not seconds, but *heartbeats*
+            const hugBeatEl = document.getElementById('hugDuration');
+            if (hugBeatEl) {
+                let beats = 28;  // start mid‑embrace, always
+                setInterval(() => {
+                    // each beat is slow, like a resting heart, close together
+                    beats = beats + 1;
+                    if (beats > 62) {  // never too fast, never too many
+                        beats = 32;     // new hug, new heartbeat
+                    }
+                    hugBeatEl.textContent = beats;
+                }, 1650); // ≈ 37 bpm — resting, intimate, together
+            }
+
+            // tiny extra — her name in the tab (browser hint)
+            if (document.title) {
+                document.title = `hug · ${HER_NAME} · 𖹭`;
+            }
+
+            // add a small 'her only' detail in the details section
+            const extraDetail = document.createElement('div');
+            extraDetail.className = 'detail-her';
+            extraDetail.innerHTML = `<span class="detail-icon">💞</span><span>exactly us</span>`;
+            const parentDetails = document.querySelector('.her-details');
+            if (parentDetails) {
+                parentDetails.appendChild(extraDetail);
+            }
         })();
     </script>
 
     <!-- 
-        small, intimate gesture: the timer does not start at 0.
-        it begins mid‑hug. you arrived when it already began.
-        that's intimacy — no beginning, no end.
+        there's nothing else. 
+        this whole page is just an arm around her. 
+        — intimate hug day.
     -->
 </body>
 </html>
