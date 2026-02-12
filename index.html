@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hug :: intimate day</title>
+    <!-- soft, tender vibe — no sharp edges -->
+    <style>
+        /* reset – whisper quiet */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fce9e6;  /* warm blush, like skin after an embrace */
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+                         'Helvetica Neue', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 1.5rem;
+            line-height: 1.5;
+            color: #4a3b3c;  /* muted rose-brown, intimate ink */
+        }
+
+        /* main = a held space */
+        .cocoon {
+            max-width: 750px;
+            width: 100%;
+            background: rgba(255, 248, 245, 0.7);  /* veiled linen */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 48px 24px 56px 24px;
+            box-shadow: 
+                0 18px 30px -12px rgba(90, 40, 40, 0.08),
+                0 8px 14px -6px rgba(140, 70, 70, 0.04),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+            padding: 2.8rem 2.2rem;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 235, 230, 0.5);
+        }
+
+        /* intimate means: no loud movements, just quiet closeness */
+        .cocoon:hover {
+            box-shadow: 
+                0 24px 40px -16px rgba(110, 60, 60, 0.1),
+                inset 0 0 0 1px rgba(255, 245, 240, 0.8);
+            background: rgba(255, 250, 248, 0.75);
+        }
+
+        /* breathing heart — subtle, like two heartbeats syncing */
+        .pulse-embley {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 4px 6px rgba(190, 100, 100, 0.1));
+        }
+
+        .heart-holds {
+            display: inline-block;
+            position: relative;
+            font-size: 3.4rem;
+            line-height: 1;
+            animation: softPulse 3.6s infinite ease-in-out;
+            transform-origin: center;
+            letter-spacing: 8px;
+        }
+
+        @keyframes softPulse {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.08); opacity: 1; }
+        }
+
+        /* the hug day greeting — close, almost whispered */
+        .day-name {
+            text-align: center;
+            font-weight: 340;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            text-transform: lowercase;
+            color: #86626b;
+            margin-bottom: 0.4rem;
+            font-feature-settings: "ss02", "case";
+            word-spacing: 2px;
+        }
+
+        .day-name span {
+            background: linear-gradient(145deg, #ab7d7d20, #dbb6b620);
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            font-weight: 380;
+            border: 0.5px solid rgba(230, 200, 200, 0.4);
+            backdrop-filter: blur(4px);
+            font-size: 1.9rem;
+        }
+
+        /* tender message — like arms reaching quietly */
+        .embrace-text {
+            font-size: 1.45rem;
+            text-align: center;
+            margin: 2.2rem 0 1.8rem 0;
+            font-weight: 310;
+            color: #5e4a4d;
+            line-height: 1.7;
+            padding: 0 0.8rem;
+            font-style: normal;
+            border-top: 1px dashed rgba(200, 160, 160, 0.25);
+            border-bottom: 1px dashed rgba(200, 160, 160, 0.25);
+            padding: 1.6rem 0.8rem;
+        }
+
+        .embrace-text i {
+            font-style: italic;
+            color: #9f7276;
+            font-weight: 350;
+        }
+
+        /* details: small, warm, tactile — like fingers tracing */
+        .details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.8rem;
+            margin: 2.5rem 0 1.2rem;
+            color: #795a5c;
+            font-weight: 330;
+        }
+
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 235, 230, 0.3);
+            padding: 0.8rem 1.2rem;
+            border-radius: 60px 20px 60px 20px;
+            border: 0.5px solid rgba(255, 220, 210, 0.6);
+            backdrop-filter: blur(2px);
+            font-size: 0.98rem;
+            transition: all 0.18s;
+        }
+
+        .detail-item:hover {
+            background: rgba(255, 225, 215, 0.5);
+            border-color: rgba(200, 140, 140, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .detail-icon {
+            font-size: 1.9rem;
+            margin-bottom: 0.1rem;
+            opacity: 0.85;
+        }
+
+        /* hug timer — a slow count, no rush */
+        .hug-clock {
+            background: rgba(245, 220, 215, 0.3);
+            border-radius: 120px;
+            padding: 0.8rem 2rem;
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            border: 0.5px solid rgba(230, 190, 180, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            color: #6f565a;
+            backdrop-filter: blur(4px);
+            letter-spacing: 0.3px;
+        }
+
+        .hug-clock span {
+            font-weight: 460;
+            background: #ffffff70;
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            color: #8f5a5c;
+            font-size: 1.35rem;
+            border: 0.5px solid #ffe2db;
+            box-shadow: inset 0 1px 4px rgba(255,255,255,0.8);
+        }
+
+        /* arms/silhouette – barely there, but present */
+        .arms-silhouette {
+            display: flex;
+            justify-content: center;
+            gap: 0.6rem;
+            margin: 1.4rem 0 0.2rem;
+            font-size: 2.4rem;
+            opacity: 0.55;
+            filter: drop-shadow(0 2px 2px rgba(150, 90, 90, 0.1));
+            letter-spacing: -4px;
+        }
+
+        /* small personal note – intimate, handwritten feel */
+        .personal-note {
+            text-align: right;
+            font-size: 0.95rem;
+            margin-top: 2rem;
+            color: #7a6266;
+            border-top: 1px solid rgba(210, 180, 180, 0.3);
+            padding-top: 1.5rem;
+            font-weight: 320;
+            text-transform: lowercase;
+            font-style: italic;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .personal-note .curl {
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        /* everything lowercase, intimate = not formal */
+        h1, h2, h3, p {
+            all: unset;
+            display: block;
+        }
+
+        /* RESPONSIVE — soft on any screen */
+        @media (max-width: 500px) {
+            .cocoon {
+                padding: 2rem 1.5rem;
+                border-radius: 36px 20px 36px 20px;
+            }
+            .embrace-text {
+                font-size: 1.25rem;
+            }
+            .heart-holds {
+                font-size: 2.8rem;
+            }
+            .details {
+                gap: 1rem;
+            }
+        }
+
+        /* invisible accessibility skip – not needed here, just quiet */
+        ::selection {
+            background: #deb6b0;
+            color: #2c1e1f;
+        }
+        :-moz-selection {
+            background: #deb6b0;
+            color: #2c1e1f;
+        }
+
+        /* delicate ornament – breath */
+        .breath {
+            height: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- everything is an embrace, nothing shouts -->
+    <div class="cocoon">
+        
+        <!-- tiny heartbeat, almost shy -->
+        <div class="pulse-embley">
+            <span class="heart-holds">🤍🫂🤍</span>
+        </div>
+        
+        <!-- hug day — lowercase, intimate, like a secret -->
+        <div class="day-name">
+            <span>hug day · intimate</span>
+        </div>
+        
+        <!-- main whispered message – arms, silence, warmth -->
+        <div class="embrace-text">
+            not too tight, <br> 
+            <i>just enough to feel your breath</i> <br>
+            slow, present, <br>
+            ·  your arms around me  · 
+        </div>
+        
+        <!-- small intimate moments – tactile, real -->
+        <div class="details">
+            <div class="detail-item">
+                <span class="detail-icon">🕯️</span>
+                <span>soft light</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-icon">🛋️</span>
+                <span>silence</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-icon">☕</span>
+                <span>shared warmth</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-icon">🤎</span>
+                <span>skin to skin</span>
+            </div>
+        </div>
+        
+        <!-- the hug itself — counted in seconds, unhurried -->
+        <div class="hug-clock">
+            <span style="background: none; padding: 0; font-size: 1.6rem;">𓂀𓂋</span>  
+            this hug lasts:  
+            <span id="hugSeconds">20</span> seconds  
+            <span style="background: none; padding: 0; font-size: 1.6rem;">𓂋𓂀</span>
+        </div>
+        
+        <!-- two figures, barely drawn — you & me -->
+        <div class="arms-silhouette">
+            <span>𑁍</span>  
+            <span>🫂</span>  
+            <span>𑁍</span>
+        </div>
+        
+        <!-- closing intimate note — just between us -->
+        <div class="personal-note">
+            <span class="curl">〰️</span>
+            <span>for you, today, only you know how this feels</span>
+            <span class="curl">〰️</span>
+        </div>
+        
+        <!-- tiny breath spacer, unassuming -->
+        <div class="breath"></div>
+    </div>
+
+    <!-- quiet script — counts a slow, lingering hug (intimate & still) -->
+    <script>
+        (function() {
+            "use strict";
+
+            // A hug that doesn't rush – seconds grow, then reset softly.
+            const hugEl = document.getElementById('hugSeconds');
+            if (!hugEl) return;
+
+            let seconds = 20;      // start at 20, feels like a real hug length
+            const hugInterval = setInterval(function() {
+                // intimate: it goes up, not down — a hug that keeps giving
+                seconds = seconds + 1;
+                
+                // but we don't want numbers to shout; stay within 20–45, gentle range
+                if (seconds > 46) {
+                    seconds = 22;   // soft reset, like a second hug
+                }
+                
+                // update the display — no animation, just a quiet presence
+                hugEl.textContent = seconds;
+            }, 2800); // every 2.8 sec — slow, like a long embrace, not a clock
+            // no cleanup needed — this hug continues as long as the page is open
+        })();
+    </script>
+
+    <!-- 
+        small, intimate gesture: the timer does not start at 0.
+        it begins mid‑hug. you arrived when it already began.
+        that's intimacy — no beginning, no end.
+    -->
+</body>
+</html>
